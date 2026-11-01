@@ -192,6 +192,70 @@ function openPage(page) {
 }
 </script>
 
+<!-- KAIRA LOGIN & SIGNUP -->
+<style>
+.auth-screen {
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:linear-gradient(135deg,#df579c,#7955d8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.auth-box {
+  background:white;
+  color:#333;
+  width:100%;
+  max-width:350px;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+}
+.auth-box h1 {
+  color:#bd4caa;
+  margin-bottom:10px;
+}
+.auth-box input {
+  width:100%;
+  padding:13px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:9px;
+  box-sizing:border-box;
+}
+.auth-box button {
+  width:100%;
+  padding:13px;
+  margin-top:12px;
+  border:0;
+  border-radius:9px;
+  background:linear-gradient(90deg,#df579c,#7955d8);
+  color:white;
+  font-weight:bold;
+}
+.auth-box p {font-size:14px;}
+</style>
+
+<div class="auth-screen" id="kairaAuth">
+  <div class="auth-box">
+    <h1>KAIRA ✨</h1>
+    <p id="authTitle">Welcome Back!</p>
+    <input id="authName" placeholder="Your name" />
+    <input type="email" placeholder="Email address" />
+    <button onclick="demoLogin()">Continue to KAIRA</button>
+    <p>Demo screen – no real account is created.</p>
+  </div>
+</div>
+
+<script>
+function demoLogin() {
+  document.getElementById("kairaAuth").style.display="none";
+  alert("Welcome to KAIRA!");
+}
+</script>
+  
 </body>
   </html>
       
