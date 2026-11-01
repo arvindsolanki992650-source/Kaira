@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAIRA</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101018;
+  color: white;
+}
+
+header {
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(120deg,#00c78b,#7045ff,#ed45b5);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.profile {
+  background: white;
+  color: #222;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.welcome {
+  padding: 25px 20px;
+}
+
+.welcome h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #aaa;
+}
+
+.search {
+  margin: 0 20px 20px;
+  padding: 14px;
+  width: calc(100% - 40px);
+  border: 1px solid #444;
+  border-radius: 15px;
+  background: #20202b;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  min-height: 145px;
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.card:active {
+  transform: scale(.96);
+}
+
+.card span {
+  font-size: 35px;
+}
+
+.card h3 {
+  font-size: 18px;
+}
+
+.music { background: linear-gradient(135deg,#00c78b,#006b75); }
+.movies { background: linear-gradient(135deg,#ff8a00,#ed315f); }
+.social { background: linear-gradient(135deg,#7045ff,#c23bba); }
+.chat { background: linear-gradient(135deg,#00b9e8,#2456b8); }
+.calls { background: linear-gradient(135deg,#25bd78,#087d50); }
+.filters { background: linear-gradient(135deg,#f044a0,#7635df); }
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 17px 5px;
+  background: #20202b;
+  border-top: 1px solid #333;
+}
+
+.bottom button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 13px;
+}
+
+#message {
+  text-align: center;
+  padding: 20px;
+  color: #00d99b;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">KAIRA</div>
+  <div class="profile">👤</div>
+</header>
+
+<section class="welcome">
+  <h2>Welcome to KAIRA ✨</h2>
+  <p>Your world. Your style. Your space.</p>
+</section>
+
+<input class="search" placeholder="Search anything...">
+
+<div class="grid">
+
+  <div class="card music" onclick="openPage('Music')">
+    <span>🎵</span>
+    <h3>Music</h3>
+  </div>
+
+  <div class="card movies" onclick="openPage('Movies')">
+    <span>🎬</span>
+    <h3>Movies</h3>
+  </div>
+
+  <div class="card social" onclick="openPage('Social')">
+    <span>📸</span>
+    <h3>Social</h3>
+  </div>
+
+  <div class="card chat" onclick="openPage('Chats')">
+    <span>💬</span>
+    <h3>Chats</h3>
+  </div>
+
+  <div class="card calls" onclick="openPage('Calls')">
+    <span>📞</span>
+    <h3>Calls</h3>
+  </div>
+
+  <div class="card filters" onclick="openPage('Filters')">
+    <span>✨</span>
+    <h3>Photo Filters</h3>
+  </div>
+
+</div>
+
+<div id="message"></div>
+
+<nav class="bottom">
+  <button onclick="openPage('Home')">🏠<br>Home</button>
+  <button onclick="openPage('Explore')">🔍<br>Explore</button>
+  <button onclick="openPage('Create')">➕<br>Create</button>
+  <button onclick="openPage('Profile')">👤<br>Profile</button>
+  <button onclick="openPage('Settings')">⚙️<br>Settings</button>
+</nav>
+
+<script>
+function openPage(page) {
+  document.getElementById("message").innerText =
+    page + " — Coming Soon ✨";
+}
+</script>
+
+</body>
+  </html>
+      
